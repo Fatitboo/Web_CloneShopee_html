@@ -1,62 +1,73 @@
-header{
+header {
     height: 120px;
     background-image: linear-gradient(0, #fe6433, #f53e2d);
 }
-.header__navbar{
+
+.header__navbar {
     display: flex;
     justify-content: space-between;
 }
-.header__navbar-list{
+
+.header__navbar-list {
     list-style: none;
     padding-left: 0;
 }
-.header__navbar-item{
+
+.header__navbar-item {
     margin: 0 8px;
     position: relative;
     min-height: 26px;
 }
+
 .header__navbar-item,
-.header__navbar-item-link{
+.header__navbar-item-link {
     display: inline-block;
     font-size: 1.4rem;
     color: var(--white-color);
     text-decoration: none;
     font-weight: 300;
 }
+
 .header__navbar-item:hover,
-.header__navbar-item-link:hover{
+.header__navbar-item-link:hover {
     color: rgba(255, 255, 255, 0.7);
     cursor: pointer;
 }
+
 .header__navbar-item,
 .header__navbar-item-link,
-.header__navbar-icon{
+.header__navbar-icon {
     display: inline-block;
     align-items: center;
 }
-.header__navbar-item--strong{
+
+.header__navbar-item--strong {
     font-weight: 500;
 }
-.header__navbar-item--separate::after{
+
+.header__navbar-item--separate::after {
     content: "";
     display: block;
     position: absolute;
     height: 14px;
     border-left: 1px solid #FB9086;
     right: -10px;
-    top: 50%;
+    top: 30%;
     transform: translateY(-50%);
 }
-.header__navbar-icon{
+
+.header__navbar-icon {
     font-size: 1.8rem;
     margin: 0 4px;
 }
-.header__navbar-title--no-pointer{
+
+.header__navbar-title--no-pointer {
     cursor: text;
     color: var(--white-color);
 }
+
 /* Header QR code */
-.header__qr{
+.header__qr {
     background-color: var(--white-color);
     width: 186px;
     position: absolute;
@@ -67,7 +78,8 @@ header{
     display: none;
     animation: FaceIn ease 0.8s;
 }
-.header__qr::before{
+
+.header__qr::before {
     content: "";
     position: absolute;
     left: 0;
@@ -76,26 +88,36 @@ header{
     height: 20px;
     display: block;
 }
-.header__qr-img{
+
+.header__qr-img {
     width: 100%;
 }
-.header__qr-apps{
+
+.header__qr-apps {
     display: flex;
     justify-content: space-between;
 }
-.header__qr-link:nth-child(1){
+
+.header__qr-link:nth-child(1) {
     margin-left: 11px;
 }
-.header__qr-link:nth-child(2){
+
+.header__qr-link:nth-child(2) {
     margin-right: 11px;
 }
-.header__qr-download-img{
-    height: 16px;  
+
+.header__qr-download-img {
+    height: 16px;
 }
-.header__navbar-item--has-qr:hover .header__qr{
+
+.header__navbar-item--has-qr:hover .header__qr {
     display: block;
 }
-.header__notify{
+
+/* End css header QR code */
+
+/* Header notify bảng thông báo */
+.header__notify {
     position: absolute;
     top: 118%;
     width: 404px;
@@ -105,20 +127,22 @@ header{
     box-shadow: 0 0 2px;
     cursor: default;
     display: none;
-    transform-origin:calc(100%-20px) top ;
+    transform-origin: calc(100%-20px) top;
     animation: headerNotifyGrowth ease .2s;
     will-change: opacity, transform;
 }
-.header__notify::before{
+
+.header__notify::before {
     content: "";
     border-width: 20px 27px;
-    border-style:  solid;
+    border-style: solid;
     border-color: transparent transparent white transparent;
     position: absolute;
     right: 0;
     top: -30px;
 }
-.header__notify::after{
+
+.header__notify::after {
     content: "";
     position: absolute;
     display: block;
@@ -127,53 +151,58 @@ header{
     width: 100px;
     height: 20px;
 }
-.header__notify--has-notify:hover .header__notify{
+
+.header__notify--has-notify:hover .header__notify {
     display: block;
 }
-.header__notify-header{
+
+.header__notify-header {
     height: 40px;
     border-color: var(--white-color);
 
 }
-.header__notify-header h3{
+
+.header__notify-header h3 {
     color: #999;
     margin: 0 0 0 12px;
-    font-weight:400;
+    font-weight: 400;
     font-size: 1.5rem;
     line-height: 40px;
-    
+
 }
-.header__notify-list{
+
+.header__notify-list {
     padding-left: 0;
 
 }
 
-.header__notify-item--viewed{
+.header__notify-item--viewed {
     background-color: rgba(238, 77, 45, 0.08);
 }
-.header__notify-item--viewed:hover{
+
+.header__notify-item--viewed:hover {
     background-color: #f7f7f7;
 
 }
 
-.header__notify-link{
+.header__notify-link {
     display: flex;
     width: 100%;
     padding: 10px 0 10px 12px;
     text-decoration: none;
 }
 
-.header__notify-img{
+.header__notify-img {
     width: 48px;
     object-fit: contain;
-    align-self:flex-start;
+    align-self: flex-start;
 }
 
-.header__notify-info{
+.header__notify-info {
     margin-left: 12px;
 }
 
-.header__notify-name{
+.header__notify-name {
     display: block;
     font-size: 1.4rem;
     color: var(--text-color);
@@ -182,16 +211,14 @@ header{
     line-height: 1.8rem;
 }
 
-.header__notify-description{
+.header__notify-description {
     display: block;
     font-size: 1.2rem;
     line-height: 1.5rem;
     color: #756F6E;
 }
-.header__notify-footer{
-    /* display: flex; */
-}
-.header__notify-footer-btn{
+
+.header__notify-footer-btn {
     display: block;
     text-decoration: none;
     color: var(--black-color);
@@ -200,4 +227,62 @@ header{
     font-size: 1.5rem;
     font-weight: 400;
     text-align: center;
+}
+
+/* end notify header */
+.auth-form{
+    width: 500px;
+    background-color: var(--white-color);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.auth-form__aside{
+    margin-top: 16px;
+    padding:0 12px;
+}
+
+.auth-form__policy-text{
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    text-align: center;
+}
+.auth-form__text-link{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.auth-form__controls{
+    margin-top: 80px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: flex-end;
+}
+.auth-form__controls-back{
+    margin-right: 8px;
+}
+
+/* --------- */
+.auth-form__socials {
+    background-color: #F5F5F5;
+    padding: 16px 36px;
+    display: flex;
+    justify-content: space-between;
+}
+.auth-form__socials-icon{
+    font-size: 1.8rem;
+}
+.auth-form__socials--facebook{
+    background-color: #3A5A98;
+    color: var(--white-color);
+}
+.auth-form__socials--facebook
+.auth-form__socials-icon {
+    color: var(--white-color);
+}
+.auth-form__socials-title{
+    margin: 0 36px;
+}
+.auth-form__socials--google{
+    color: #666;
+    background-color: var(--white-color);
 }
