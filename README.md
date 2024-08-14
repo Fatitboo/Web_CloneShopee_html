@@ -1,5 +1,5 @@
 # Web_CloneShopee_html
 
-* Mô tả: Một giao diện web clone trang mua sắm Shoppe 
+* Description: A web interface clone Shoppe shopping page in the html css learning process
 
-* Công nghệ: HTML - CSS - Javascript
+* Technology: HTML - CSS - Javascript
